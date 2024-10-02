@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    //-----------------------------ARROW FUNCTIONS
+    //-----------------------------EJERCICIO 1
+
+    const add = (a, b) => {
+        return suma = a + b;
+    }
+
+    let a = 4;
+    let b = 6;
+
+    add(a, b)
+    console.log('La suma de ' + a + " + " + b + " es ====> " + suma);
+
+
+    //-----------------------------EJERCICIO 2
+
+    // const randomNumber = () => {
+    //     return Math.floor(Math.random() * 101);
+    // }
+
+    // let aleatorio = randomNumber();
+    // console.log('Numero aleatorio entre 0-100, suerte!! ===> ' + aleatorio);
+
+    //-----------------------------EJERCICIO 3
+
+    // class Persona {
+    //     constructor(name, age) {
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+
+    //     greet = () => {
+    //         console.log(`Hola!! Mi nombre es ${this.name} y tengo ${this.age} años.`);
+    //     }
+    // }
+
+    // const primeraPersona = new Persona('Raul', 31);
+    // primeraPersona.greet();
+
+    //-----------------------------EJERCICIO 4
+
+    // const numbers = [4, 10, 23, 1, 65.02];
+
+    // console.log('Posiciona estos números: ' + numbers),
+
+    //     numbers.forEach((printNumbers, i) =>
+
+    //         console.log('Posición ' + i + ' en el array ====> ' + printNumbers));
+
+    //-----------------------------EJERCICIO 5
+
+    // setTimeout(() => {
+    //     console.log("Tu archivo ha tardad en procesarse: " + timeSetted + ' ms.');
+    // }, timeSetted = 3000);
+
+    //-----------------------------OPERADOR TERNARIO
+    //-----------------------------EJERCICIO 1
+
+    // function puedeConducir(edad) {
+    //     return edad >= 18 ? 'Puede conducir' : 'No puede conducir';
+    // }
+
+    // console.log(puedeConducir(12));
+    // console.log(puedeConducir(29));
+
+    //-----------------------------EJERCICIO 2
+
+    // let numero1 = 888;
+    // let numero2 = 5;
+
+    // let resultado = numero1 === numero2
+    //     ? 'Los dos numeros son iguales!!'
+    //     : (numero1 > numero2
+    //         ? 'El número más grande es: ' + numero1
+    //         : 'El número más grande es: ' + numero2);
+
+    // console.log(resultado);
+
+    //-----------------------------EJERCICIO 3
+
+    // let numero = -55;
+
+    // let resultado = numero > 0
+    //     ? 'El número es positivo' : (numero < 0
+    //         ? 'El número es negativo'
+    //         : 'El número es cero');
+
+    // console.log(resultado);
+
+    // function encontrarValorMaximo(a, b, c) {
+    //     return a > b
+    //     ? (a > c ? a : c)
+    //     : (b > c ? b : c);
+    // }
+
+    // valor1 = encontrarValorMaximo(4, 1, 66)
+    // valor2 = encontrarValorMaximo(34, 155, 56)
+    // valor3 = encontrarValorMaximo(44, 11, 6)
+
+
+    // console.log('El valor máximo de 4, 1 y 66 es ==> ' + valor1);
+    // console.log('El valor máximo de 34, 155 y 56 es ==> ' + valor2);
+    // console.log('El valor máximo de 44, 11 y 6 es ==> ' + valor3);
+
+    //-----------------------------EJERCICIO 4
+
+    // function parOImpar(numeros) {
+    //     for (let i = 0; i < numeros.length; i++) {
+    //         let resultado = numeros[i] === 0 ? 'cero' : (numeros[i] % 2 === 0 ? 'par' : 'impar');
+    //         console.log(`El número ${numeros[i]} es ${resultado}`);
+    //     }
+    // }
+
+    // parOImpar([43, 2, 66, 192, 85, 1, 0]);
+
+    //-----------------------------CALLBACKS
+    //-----------------------------EJERCICIO 1
+
+    // function procesar(numero, callback) {
+    //     callback(numero);
+    // }
+
+    // function imprimirNumero(num) {
+    //     console.log("El número es: " + num);
+    // }
+
+    // //RECORDATORIO: Callback es llamar una funcion dentro de otra, el callback es el segundo parámetro de la funcion procesar.
+    // procesar(10, imprimirNumero);
+
+    //-----------------------------EJERCICIO 2
+
+    // function calculadora (num1, num2, callback) {
+    //     callback(num1, num2)
+    // }
+
+    // function sumarValores (valor1, valor2) {
+    //     suma = valor1 + valor2
+    //     console.log('La suma de ' + valor1 + ' + ' + valor2 + ' es ===> ' + suma)
+    // }
+
+    // calculadora(3,5, sumarValores)
+    // calculadora(8,33, sumarValores)
+    // calculadora(71,8, sumarValores)
+    // calculadora(99999,888888, sumarValores)
+
+    //-----------------------------EJERCICIO 3
+
+    // function esperarISaludar(name, callback) {
+    //     callback(name)
+    // }
+
+    // function wait(realName) {
+    //     setTimeout(() => {
+    //         console.log('Hola ' + realName + ' :) He tardado 2s en encontrarte.');
+    //     }, timeSetted = 2000);      
+    // }
+
+    // esperarISaludar('Raul', wait)
+
+    //-----------------------------EJERCICIO 4
+
+    // function procesarElementos(array, callback) {
+    //     for (let i = 0; i < array.length; i++) {
+    //         callback(array[i]);
+    //     }
+    // }
+
+    // function imprimirElemento(elemento) {
+    //     console.log("Elemento " + elemento);
+    // }
+
+    // procesarElementos(['Tierra', 'Agua', 'Fuego', 'Aire'], imprimirElemento);
+
+    //-----------------------------EJERCICIO 5
+
+    // function procesarCadena(cadena, callback) {
+    //     const resultado = cadena.toUpperCase();
+    //     callback(resultado);
+
+    // }
+
+    // function convertirCaps(cadenaCap) {
+    //     console.log("Conviertiendo en mayúsculas... " + cadenaCap);
+    // }
+
+    // procesarCadena('En la tierra tenemos cuatro elementos: Tierra, Agua, Fuego y Aire', convertirCaps);
+
+    //-----------------------------REST & SPREAD
+    //-----------------------------EJERCICIO 1
+
+    // const array1 = [1, 2, 3];
+    // const array2 = [4, 5, 6];
+    // const array3 = [...array1, ...array2];
+    // console.log('Tenemos el Array1: [' + array1 + '] y el Array2: [' + array2 + '], los juntamos con Spread ===> [' + array3 + ']');
+
+    //-----------------------------EJERCICIO 2
+
+    // function suma(...numeros) {
+    //     return numeros.reduce((acc, num) => acc + num, 0);
+    // }
+
+    // console.log(suma(7, 322, 0, 0));
+    // console.log(suma(140, 900, 22, 32));
+    // console.log(suma(-7, 7));
+    // console.log(suma(1, 1, 1, 1));
+    // console.log(suma());
+
+    //-----------------------------EJERCICIO 3
+
+    // const objeto1 = {
+    //     direccion: {
+    //         calle: 'Consell de Cent',
+    //         ciudad: 'Barcelona',
+    //         numero: '350'
+    //     },
+    //     edad: 25
+    // };
+
+    // const objeto2 = JSON.parse(JSON.stringify(objeto1));
+
+    // objeto2.direccion.ciudad = "Sabadell"
+
+    // console.log(objeto1.direccion.ciudad);
+    // console.log(objeto2.direccion.ciudad);
+
+    //-----------------------------EJERCICIO 4
+
+    // let [a, b, ...everythingElse] = arrayFrutas = ['Manzana', 'Platano', 'Melocoton', 'Pera', 'Melon', 'Sandia', 'Cereza', 'Fresa'];
+
+    // console.log(a);
+    // console.log(b);
+    // console.log(everythingElse);
+
+    //-----------------------------EJERCICIO 5
+
+    // function showData(a, b, c) {
+    //     console.log(`Primer elemento: ${a}`);
+    //     console.log(`Segundo elemento: ${b}`);
+    //     console.log(`Tercer elemento: ${c}`);
+    //     console.log('Cadena completa: ' + a + ' ' + b + ' '  + c);
+
+    // }
+
+
+    // const resultado = ['WEB ERROR', 409, 'NOT FOUND'];
+
+    // showData(...resultado);
+
+    //-----------------------------EJERCICIO 6
+
+    // const objeto1 = {
+    //     direccion: {
+    //         calle: 'Consell de Cent',
+    //         ciudad: 'Barcelona',
+    //         numero: '350'
+    //     },
+    //     edad: 25
+    // };
+
+    // const objeto2 = {
+    //     pelo: {
+    //         color: 'Castaño',
+    //         tipo: 'Corto',
+    //     },
+    //     peso: 85
+    // };
+
+    // let mixObjects = {...objeto1, ...objeto2}
+
+    // console.log(mixObjects);
+
+    //-----------------------------ARRAY TRANSFORMATION
+    //-----------------------------EJERCICIO 1
+
+    // let numbers = [1, 2, 3, 4];
+
+    // const doSquare = numbers.map((num) => num * 2);
+
+    // console.log('El cuadrado de: ' + numbers + ' es ==> ' + doSquare);
+
+    //-----------------------------EJERCICIO 2
+
+    // let numbers = [1, 2, 3, 4];
+
+    // const doEven = numbers.filter((num) => num % 2 === 0);
+
+    // console.log('Los numeros pares de: ' + numbers + ' son ==> ' + doEven);
+
+    //-----------------------------EJERCICIO 3
+
+    // let numbers = [1, 10, 8, 11];
+
+    // const findMaxnumber = numbers.find((num) => num > 10);
+
+    // console.log('De estos numeros: ' + numbers + ' solo es mayor que 10, este ==> ' + findMaxnumber);
+
+    //-----------------------------EJERCICIO 4
+
+    // let numbers = [13, 7, 8, 21];
+
+    // const sumaAllArray = numbers.reduce((acumulador, num) => acumulador + num, 0);
+
+    // console.log('La suma de todos estos numeros: ' + numbers + ' es ==> ' + sumaAllArray);
+
+    //-----------------------------EJERCICIO 5
+
+    // let numbers = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9];
+
+    // const arrayChainProcessor = array => array.filter((num) => num >= 10).map((num) => num*2).reduce((acumulador, num) => acumulador + num, 0)
+
+    // resultado = arrayChainProcessor(numbers);
+
+    // console.log('El resultado de todas las operaciones es ==> ' + resultado);
+
+    //-----------------------------EJERCICIO 6
+
+    // let numbers = [11, 12, 13, 14];
+
+    // const checkTodosMayoresQue10 = numbers.every(num => num > 10);
+
+    // const checkAlgunoMayorQue10 = numbers.some(num => num > 10);
+
+    // console.log("Dado este array: " + numbers + ' los numeros son todos mayores de 10? => ' + checkTodosMayoresQue10);
+    // console.log("Dado este array: " + numbers + ' hay algun numero que sea mayor que 10? => ' + checkAlgunoMayorQue10);
+
+    //-----------------------------ARRAY LOOPS
+    //-----------------------------EJERCICIO 1
+
+    // let noms = ['Anna', 'Bernat', 'Clara'];
+
+    // const showNames = (array) => {
+    //     array.forEach(element => {
+    //         console.log(element);
+    //     });
+    // }
+
+    // showNames(noms);
+
+    //-----------------------------EJERCICIO 2
+
+    // let noms = ['Anna', 'Bernat', 'Clara'];
+
+    // for (let value of noms) {
+
+    //     console.log(value);
+    // }
+
+    //-----------------------------EJERCICIO 3
+
+    // let numeros = [1, 2, 3, 4, 5, 6];
+
+    // let numerosPares = numeros.filter(num => num % 2 === 0);
+
+    // console.log('Teniendo este array: ' + numeros + ' estos son los pares ==> ' + numerosPares);
+
+    //-----------------------------EJERCICIO 4
+
+    // let obj = { nom: 'Ona', edat: 25, ciutat: 'Barcelona' };
+
+    // for (const property in obj) {
+    //     console.log(`${property}: ${obj[property]}`);
+    // }
+
+    //-----------------------------EJERCICIO 5
+
+    // let numeros = [1, 2, 3, 4, 5, 6];
+
+    // for (const element of numeros) {
+    //     console.log(element);
+    //     if (element === 5) {
+    //         break;
+    //     }
+    // }
+
+    //-----------------------------EJERCICIO 6
+
+    // let noms = ['Anna', 'Bernat', 'Clara']
+
+    // for (let [index, nom] of noms.entries()) {
+    //     console.log(index, nom);
+    // }
+
+    //-----------------------------PROMISES ASYNC/WAIT
+    //-----------------------------EJERCICIO 1
+
+    // const helloWorldPromise = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //         resolve(alert('Hola, món'));
+    //     }, 2000);
+    // });
+
+    //-----------------------------EJERCICIO 2
+
+    // const helloWorldPromise = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //         resolve('Hola, món');
+    //     }, 2000);
+    // });
+    // helloWorldPromise.then(function (e) {
+    //     console.log(e);
+    // })
+
+    //-----------------------------EJERCICIO 3
+
+    // function greetingPromise(input) {
+    //     return new Promise(function (resolve, reject) {
+    //         setTimeout(function () {
+    //             if (input === 'Hola') {
+    //                 resolve('Saludo correcto :)');
+    //             } else {
+    //                 reject('Saludo incorrecto :(');
+    //             }
+    //         }, 2000);
+    //     });
+    // }
+
+    // greetingPromise('Hola')
+    //     .then(function (resp) {
+    //         console.log(resp);
+    //     })
+    //     .catch(function (resp) {
+    //         console.log(resp);
+    //     });
+
+    //-----------------------------EJERCICIO 4
+
+    // async function saludarMundo() {
+    //     const helloWorldPromise = new Promise(function (resolve, reject) {
+    //         setTimeout(function () {
+    //             resolve(console.log('Hola, món!'));
+    //         }, 2000);
+    //     });
+    //     const resultat = await helloWorldPromise;
+    // }
+
+    // saludarMundo()
+
+    //-----------------------------EJERCICIO 5
+
+    // async function saludarMundo() {
+    //     try {
+    //         const helloWorldPromise = new Promise(function (resolve, reject) {
+    //             setTimeout(function () {
+    //                 //resolve(console.log('Hola, món!'));
+    //                 reject('Algo no esta funcionando bien... Contacta con Raul!'); 
+
+    //             }, 2000);
+    //         });
+    //         const resultat = await helloWorldPromise;
+    //     } catch (error) {
+    //         console.error('Error !', error);
+
+    //     }
+    // }
+
+    // saludarMundo()
+
+    //-----------------------------EJERCICIO 6
+
+    // const testPromesa2s = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve('La promesa 1 ha funcionado después de 2s.');
+    //         //reject('Algo no esta funcionando bien... Contacta con Raul!');
+    //     }, 2000);
+    // });
+
+    // const testPromesa3s = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve('La promesa 2 ha funcionado después de 3s.');
+    //         //reject('Algo no esta funcionando bien... Contacta con Raul!');
+    //     }, 3000);
+    // });
+
+    // Promise.all([testPromesa2s, testPromesa3s])
+    //     .then(done => {
+    //         console.log(done);
+    //     })
+    //     .catch(error => {
+    //         console.error('Alguna de las dos promesas está fallando.', error);
+    //     });
+
+
+
+
+</script>
+
+</html>
